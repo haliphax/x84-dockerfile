@@ -1,0 +1,23 @@
+# x84.conf
+# --------
+# change the -v paths to match your system
+
+start on runlevel [2345]
+stop on runlevel [016]
+respawn
+
+post-start script
+	docker run -d \
+		-p 6022:6022 -p 6023:6023 -p 8443:8443 \
+		-v /path/to/persist/data:/home/x84/.x84 \
+		-v /path/to/persist/bbs:/home/x84/bbs \
+		-v /path/to/persist/sftp:/home/x84/x84-sftp_root \
+		--name=x84 \
+		haliphax/x84:latest \
+		/home/x84/scripts/init.sh
+end script
+
+post-stop script
+	docker stop x84
+	docker rm -f $(docker ps -a | egrep '\sx84\s+$' | awk '{print $1}')
+end script
