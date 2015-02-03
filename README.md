@@ -12,6 +12,7 @@ including dosemu, libssl, and libffi.
 
 - [Get it from Docker Hub](#get-it-from-docker-hub)
 - [Ports](#ports)
+- [Volumes](#volumes)
 - [Build it](#build-it)
 - [Run it](#run-it)
   - [bash script](#bash-script)
@@ -31,6 +32,16 @@ The image exposes the following ports:
     6022 ssh
     6023 telnet
     8443 https
+
+## Volumes
+
+The image exposes the following volumes:
+
+    /home/x84/.x84
+    /home/x84/bbs
+    /home/x84/x84-sftp_root
+
+These are for your data files, custom scripts, and sftp root, respectively.
 
 ## Build it
 
