@@ -17,7 +17,7 @@ RUN pip2 install --upgrade x84[with_crypto]
 RUN apt-get purge -y build-essential libssl-dev libffi-dev python2.7-dev && \
     apt-get autoremove -y && apt-get autoclean && apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-VOLUME [ "/home/x84/.x84", "/home/x84/x84", "/home/x84/x84-sftp_root" ]
+VOLUME [ "/home/x84/.x84", "/home/x84/bbs", "/home/x84/x84-sftp_root" ]
 EXPOSE 6022
 EXPOSE 6023
 EXPOSE 8443
