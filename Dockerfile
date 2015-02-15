@@ -12,8 +12,7 @@ RUN mkdir /home/x84/.x84 && \
     apt-get install -y \
         build-essential libssl1.0.0 libssl-dev libffi5 libffi-dev \
         python2.7 python2.7-dev python-pip dosemu
-RUN pip install --upgrade pip
-RUN pip2 install --upgrade x84[with_crypto]
+RUN pip install --upgrade x84[with_crypto]
 RUN apt-get purge -y build-essential libssl-dev libffi-dev python2.7-dev && \
     apt-get autoremove -y && apt-get autoclean && apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
