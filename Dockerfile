@@ -1,8 +1,8 @@
 FROM debian:latest
 MAINTAINER haliphax <https://github.com/haliphax/>
 RUN useradd -m x84
-ADD ./payload/scripts /home/x84/scripts
 ADD ./payload/dosemu /home/x84/.dosemu
+ADD ./payload/scripts /home/x84/scripts
 RUN mkdir /home/x84/.x84 && \
     mkdir /home/x84/x84 && \
     mkdir /home/x84/x84-sftp_root && \
