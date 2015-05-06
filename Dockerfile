@@ -4,7 +4,7 @@ RUN useradd -m x84
 ADD ./payload/dosemu /home/x84/.dosemu
 ADD ./payload/scripts /home/x84/scripts
 RUN mkdir /home/x84/.x84 && \
-    mkdir /home/x84/x84 && \
+    mkdir /home/x84/bbs && \
     mkdir /home/x84/x84-sftp_root && \
     chown x84:x84 -R /home/x84 && \
     sed -i 's/ main/ main contrib/g' /etc/apt/sources.list && \
