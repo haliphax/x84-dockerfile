@@ -10,7 +10,7 @@ RUN mkdir /home/x84/.x84 && \
     sed -i 's/ main/ main contrib/g' /etc/apt/sources.list && \
     apt-get update && \
     apt-get install -y \
-        build-essential libssl1.0.0 libssl-dev libffi5 libffi-dev \
+        build-essential libssl1.0.0 libssl-dev libffi6 libffi-dev \
         python2.7 python2.7-dev python-pip dosemu
 RUN pip install --upgrade x84[with_crypto]
 RUN apt-get purge -y build-essential libssl-dev libffi-dev python2.7-dev && \
