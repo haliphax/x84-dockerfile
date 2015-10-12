@@ -1,4 +1,4 @@
-[![haliphax/x84 on Docker Hub](https://oddnetwork.org/hx/dockerbadge.php)](https://registry.hub.docker.com/u/haliphax/x84/)
+[![haliphax/x84 on Docker Hub](https://img.shields.io/docker/pulls/haliphax/x84.svg)](https://registry.hub.docker.com/u/haliphax/x84/)
 
 # x/84 Docker image
 
