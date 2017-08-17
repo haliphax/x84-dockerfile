@@ -4,7 +4,7 @@
 
 This is a Dockerfile for creating a Docker image to run an installation of the
 [x/84 BBS software](https://github.com/jquast/x84). It is based on the
-[debian:latest](https://registry.hub.docker.com/_/debian/) Docker image.
+[ubuntu:16.04](https://registry.hub.docker.com/_/ubuntu/) Docker image.
 
 This will build a fully-contained environment with all of the operating system
 and Python dependencies necessary to run an ssh/telnet/https setup of x/84 --
