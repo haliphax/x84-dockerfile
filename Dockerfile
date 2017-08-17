@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM ubuntu:16.04
 MAINTAINER haliphax <https://github.com/haliphax/>
 RUN useradd -m x84
 ADD ./payload/dosemu /home/x84/.dosemu
@@ -12,7 +12,7 @@ RUN mkdir /home/x84/.x84 && \
     apt-get install -y \
         build-essential libssl1.0.0 libssl-dev libffi6 libffi-dev \
         python2.7 python2.7-dev python-pip dosemu
-RUN pip install --upgrade x84[with_crypto]
+RUN pip install -U x84[with_crypto]
 RUN apt-get purge -y build-essential libssl-dev libffi-dev python2.7-dev && \
     apt-get autoremove -y && apt-get autoclean && apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
